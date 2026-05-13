@@ -1,4 +1,3 @@
-// "use client";
 import { getId } from "@/lib/data";
 import Image from "next/image";
 
