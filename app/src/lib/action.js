@@ -1,5 +1,7 @@
 "use server"
 
+import { redirect } from "next/navigation"
+
 export const createData = async(formData) => {
     const res = await fetch(`http://localhost:5000/destination`,{
         method: "POST",
@@ -9,6 +11,8 @@ export const createData = async(formData) => {
         body: JSON.stringify(formData)
     })
     const data = await res.json()
-    console.log(formData)
+    if(data.insertedId){
+        redirect('/destination')
+    }
     return data
 }
