@@ -4,14 +4,14 @@ import React from 'react';
 const AllCards = ({p}) => {
     return (
         <div>
-            <div className="max-w-sm rounded-3xl overflow-hidden bg-white shadow-lg border border-gray-200 hover:scale-105 duration-300">
+            <div className="rounded-3xl h-full overflow-hidden shadow-lg border border-red-600 shadow-orange-500 hover:scale-95 duration-500">
       
       <div className="relative h-64 w-full">
         <Image
           src={p.imageUrl}
           alt={p.destinationName}
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
         />
 
@@ -26,26 +26,26 @@ const AllCards = ({p}) => {
             {p.destinationName}
           </h2>
 
-          <p className="text-orange-500 font-bold text-lg">
+          <p className=" bg-linear-to-r from-orange-400 to-red-600 bg-clip-text text-transparent w-fit font-bold text-lg">
             ${p.price}
           </p>
         </div>
 
-        <p className="text-gray-500">
+        <p className="text-gray-400">
           {p.description}
         </p>
 
-        <div className="flex items-center justify-between text-sm text-gray-600">
-          <p>📍 {p.country}</p>
-          <p>⏳ {p.duration}</p>
+        <div className="flex items-center justify-between text-sm">
+          <p className='bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent font-bold'>📍 {p.country}</p>
+          <p>⏳ <span className='bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent font-bold'>{p.duration}</span></p>
         </div>
 
         <div className="flex items-center justify-between pt-3">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-300">
             Departure: {p.departureDate}
           </p>
 
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-5 py-2 rounded-xl font-semibold hover:opacity-90">
+          <button className="bg-linear-to-r from-purple-500 to-pink-500 text-white px-5 py-2 rounded-xl font-semibold hover:opacity-90">
             Explore
           </button>
         </div>
