@@ -100,10 +100,6 @@ const DetailsPage = async ({params}) => {
                   Booking Now
                 </button>
 
-                {/* <button className="w-full py-3 rounded-2xl bg-yellow-400 text-black font-bold hover:scale-105 duration-300">
-                  Edit Tour
-                </button> */}
-
                 <EditModal p={p} id={id}></EditModal>
 
                 <CancelData p={id} a={p}></CancelData>

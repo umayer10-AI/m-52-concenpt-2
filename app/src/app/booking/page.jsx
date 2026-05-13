@@ -8,7 +8,7 @@ const page = () => {
                 <h2 className='text-2xl font-bold'>All Booking</h2>
                 <h2 className='text-gray-400'>Hello All bookings Everyone</h2>
             </div>
-            <Booking></Booking>
+            {/* <Booking></Booking> */}
         </div>
     );
 };

@@ -1,4 +1,7 @@
 "use client"
+import { AlertDialog, Button } from '@heroui/react';
+import { Calendar, Eye, Tag } from 'lucide-react';
+import Image from 'next/image';
 import React from 'react';
 
 const Booking = () => {
