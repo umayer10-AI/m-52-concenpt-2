@@ -69,9 +69,13 @@ const run = async () => {
 
         app.post('/booking', async (req,res) => {
             const newData = req.body
-            // const result = await booking.insertOne(newUSer)
-            // res.json(result)
-            console.log(newData)
+            const result = await booking.insertOne(newData)
+            res.json(result)
+        })
+
+        app.get('/booking', async (req,res) => {
+            const result = await booking.find().toArray()
+            res.send(result)
         })
 
         await client.db("admin").command({ ping: 1 });
