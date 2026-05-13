@@ -1,11 +1,11 @@
 "use client"
+import { deleteBooking } from '@/lib/action';
 import { AlertDialog, Button } from '@heroui/react';
 import { Calendar, Eye, Tag } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
 const Booking = ({p}) => {
-    console.log(p)
     return (
         <div>
             <div className='shadow-md shadow-cyan-500 rounded-xl'>
