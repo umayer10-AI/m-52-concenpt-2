@@ -32,14 +32,17 @@ export const deleteData = async (id) => {
 }
 
 export const editUser = async (id,v) => {
-    // const res = await fetch(`http://localhost:5000/destination/${id}`,{
-    //     method: "PUT",
-    //     headers:{
-    //         "content-type" : "application/json"
-    //     },
-    //     body: JSON.stringify(v)
-    // })
-    // const data = await res.json()
-    console.log(id,v)
-    // return data
+    const res = await fetch(`http://localhost:5000/destination/${id}`,{
+        method: "PUT",
+        headers:{
+            "content-type" : "application/json"
+        },
+        body: JSON.stringify(v)
+    })
+    const data = await res.json()
+    if(data.modifiedCount > 0){
+        // revalidatePath(`/destination/${id}`)
+        redirect(`/destination/${id}`)
+    }
+    return data
 }

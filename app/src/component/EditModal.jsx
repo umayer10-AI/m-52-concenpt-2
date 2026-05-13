@@ -1,4 +1,5 @@
 "use client"
+import { editUser } from "@/lib/action";
 import {Button, FieldError, Input, Label, ListBox, Modal,Select, Surface, TextArea, TextField} from "@heroui/react";
 import React from 'react';
 import { useForm } from "react-hook-form";
@@ -6,11 +7,11 @@ import { useForm } from "react-hook-form";
 const EditModal = ({p,id}) => {
 
     const {register,handleSubmit,formState: { errors }} = useForm()
-    console.log(p)
+    // console.log(p)
     
         const a = async (v) => {
-            console.log(v)
-            await createData(v)
+            // console.log(v)
+            await editUser(id,v)
         }
 
     return (
@@ -158,6 +159,7 @@ const EditModal = ({p,id}) => {
                 
                             <Button
                               type="submit"
+                                slot="close"
                               variant="outline"
                               className=" rounded-xl w-full py-5 bg-linear-to-br from-purple-500 to-pink-500 text-white"
                             >
