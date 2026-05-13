@@ -62,8 +62,13 @@ export const bookingPost = async (v) => {
 }
 
 export const deleteBooking = async (id) => {
-    // const res = await fetch(`http://localhost:5000/booking/${id}`)
-    // const data = await res.json()
-    console.log(id)
-    // return data
+    const res = await fetch(`http://localhost:5000/booking/${id}`,{
+        method: "DELETE"
+    })
+    const data = await res.json()
+    if(data.deletedCount > 0){
+        toast.error('Booking Canaceled')
+        redirect('/booking')
+    }
+    return data
 }
