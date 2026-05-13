@@ -47,7 +47,14 @@ export const editUser = async (id,v) => {
 }
 
 export const bookingPost = async (v) => {
-    // const res = await fetch(`http://localhost:5000/booking`)
+    // const res = await fetch(`http://localhost:5000/booking`,{
+    //     method: "POST",
+    //     headers: {
+    //         "content-type":"application/json"
+    //     },
+    //     body: JSON.stringify(v)
+    // })
     // const data = await res.json()
-    console.log(v)
+    // console.log(data)
+    // return data
 }
