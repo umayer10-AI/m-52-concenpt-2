@@ -70,5 +70,6 @@ export const deleteBooking = async (id) => {
         toast.error('Booking Canaceled')
         redirect('/booking')
     }
+    
     return data
 }
