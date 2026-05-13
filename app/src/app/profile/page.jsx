@@ -1,4 +1,5 @@
 "use client"
+import EditProfle from '@/component/EditProfle';
 import { authClient } from '@/lib/auth-client';
 import { Avatar, Button } from '@heroui/react';
 import { Calendar, DollarSign, Edit3, Globe, MapPin, Plane, User } from 'lucide-react';
@@ -56,10 +57,7 @@ const page = () => {
             </div>
           </div>
 
-          <Button className="w-full mt-2 rounded-xl gap-2 bg-linear-to-r from-cyan-600 to-blue-600">
-            <Edit3 size={18} />
-            Edit Profile
-          </Button>
+          <EditProfle></EditProfle>
         </div>
 
         {/* Right Section: Statistics */}
