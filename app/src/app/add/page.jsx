@@ -1,4 +1,5 @@
 "use client"
+import { createData } from '@/lib/action';
 import { Button, FieldError, Input, Label, ListBox,Select, TextArea, TextField } from '@heroui/react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -9,6 +10,7 @@ const AddPage = () => {
 
     const a = async (v) => {
         console.log(v)
+        await createData(v)
     }
 
     return (
