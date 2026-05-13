@@ -23,22 +23,22 @@ const Nav1 = () => {
         },
         {
             name: 'Add',
-            path: "/add-destination",
+            path: "/add",
         },
     ]
 
     return (
-        <div>
+        <div className='flex items-center gap-7'>
             {
-                links.map(v => {
-                    <Link href={v.name}>
+                links.map(v => (
+                    <Link key={v.name} href={v.path}>
                         {
                             p===v.path?
                             <Button size='sm' className={'bg-linear-to-r from-orange-400 to-red-600'}>{v.name}</Button>
                             : <button>{v.name}</button>
                         }
                     </Link>
-                })
+                ))
             }
         </div>
     );
