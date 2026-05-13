@@ -1,10 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 import {Check, Eye, EyeSlash} from "@gravity-ui/icons";
-import {Button, Description, FieldError, Form, Input, InputGroup, Label, TextField} from "@heroui/react";
+import {Button, Description, FieldError, Form, Input, InputGroup, Label, Separator, TextField} from "@heroui/react";
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { authClient } from '@/lib/auth-client';
+import { FcGoogle } from 'react-icons/fc';
+import { ImGithub } from 'react-icons/im';
 
 const LoginPage = () => {
 
@@ -27,6 +29,12 @@ const LoginPage = () => {
         if(error){
             toast.error(error.message)
         }
+    }
+
+    const googleHandler = async () => {
+        const data = await authClient.signIn.social({
+            provider: "github"
+        })
     }
 
     return (
@@ -78,8 +86,12 @@ const LoginPage = () => {
           <Check />
           Login
         </Button>
-
       </div>
+
+        <div onClick={googleHandler} className='flex items-center gap-1 justify-center text-sm py-2 text-black bg-amber-50 font-semibold rounded-xl'>
+          <ImGithub />
+          Sign In With Github
+        </div>
     </Form>
         </div>
     );

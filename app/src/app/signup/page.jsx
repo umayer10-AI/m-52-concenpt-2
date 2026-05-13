@@ -1,10 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 import {Check, Eye, EyeSlash} from "@gravity-ui/icons";
-import {Button, Description, FieldError, Form, Input, InputGroup, Label, TextField} from "@heroui/react";
+import {Button, FieldError, Form, Input, InputGroup, Label, TextField} from "@heroui/react";
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { authClient } from '@/lib/auth-client';
+import { FcGoogle } from 'react-icons/fc';
+import { ImGithub } from 'react-icons/im';
 
 const SignUpPage = () => {
 
@@ -30,6 +32,12 @@ const SignUpPage = () => {
             toast.error(error.message)
         }
     }
+
+    const googleHandler = async () => {
+            const data = await authClient.signIn.social({
+                provider: "github"
+            })
+        }
 
     return (
         <div className='flex justify-center mt-10'>
@@ -103,7 +111,7 @@ const SignUpPage = () => {
         </InputGroup.Suffix>
       </InputGroup>
     </TextField>
-      <div className="flex gap-2">
+      <div className="flex gap-2 justify-center">
         <Button type="submit">
           <Check />
           Register
@@ -112,6 +120,10 @@ const SignUpPage = () => {
           Reset
         </Button>
       </div>
+      <div onClick={googleHandler} className='flex items-center gap-1 justify-center text-sm py-2 text-black bg-amber-50 font-semibold rounded-xl'>
+                <ImGithub />
+                Sign In With Github
+              </div>
     </Form>
         </div>
     );
