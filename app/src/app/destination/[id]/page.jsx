@@ -1,3 +1,4 @@
+import CancelData from "@/component/CancelData";
 import { getId } from "@/lib/data";
 import Image from "next/image";
 
@@ -102,9 +103,7 @@ const DetailsPage = async ({params}) => {
                   Edit Tour
                 </button>
 
-                <button className="w-full py-3 rounded-2xl bg-red-500 text-white font-bold hover:scale-105 duration-300">
-                  Cancel Booking
-                </button>
+                <CancelData p={id}></CancelData>
 
               </div>
 
