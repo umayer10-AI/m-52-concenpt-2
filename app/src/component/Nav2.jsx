@@ -1,6 +1,6 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
-import { Button } from '@heroui/react';
+import { Avatar, Button } from '@heroui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -20,8 +20,12 @@ const Nav2 = () => {
 
             {
                 user?
-                <div>
-                    <Button variant='danger-soft' size='sm' className={'border border-red-500 text-white'}>Log Out</Button>
+                <div className='flex items-center gap-2'>
+                    <Avatar size='sm'>
+                        <Avatar.Image alt="John Doe" referrerPolicy='no-referrer' src={user?.image} />
+                        <Avatar.Fallback>{user?.name?.charAt(0)}</Avatar.Fallback>
+                    </Avatar>
+                    <Button onClick={ async() => await authClient.signOut()} variant='danger-soft' size='sm' className={'border border-red-500 text-white'}>Log Out</Button>
                 </div> : 
 
             <div className='flex items-center gap-5'>
