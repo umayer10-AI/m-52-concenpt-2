@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import {Check, Eye, EyeSlash} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, InputGroup, Label, TextField} from "@heroui/react";
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import { authClient } from '@/lib/auth-client';
 
 const SignUpPage = () => {
 
@@ -12,7 +14,21 @@ const SignUpPage = () => {
 
     const a = async (v) => {
         console.log(v)
-        
+
+        const { data, error } = await authClient.signUp.email({
+            name: v.name,
+            email: v.email,
+            password: v.password,
+            image: v.image,
+            callbackURL: "/",
+        });
+
+        if(data){
+            toast.success("Data Successfully")
+        }
+        if(error){
+            toast.error(error.message)
+        }
     }
 
     return (
