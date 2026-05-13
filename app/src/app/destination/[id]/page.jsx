@@ -104,7 +104,7 @@ const DetailsPage = async ({params}) => {
                   Edit Tour
                 </button> */}
 
-                <EditModal></EditModal>
+                <EditModal p={p} id={id}></EditModal>
 
                 <CancelData p={id} a={p}></CancelData>
 

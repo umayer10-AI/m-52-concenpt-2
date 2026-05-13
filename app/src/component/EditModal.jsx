@@ -1,16 +1,16 @@
 "use client"
-import {Envelope} from "@gravity-ui/icons";
 import {Button, FieldError, Input, Label, ListBox, Modal,Select, Surface, TextArea, TextField} from "@heroui/react";
 import React from 'react';
 import { useForm } from "react-hook-form";
 
-const EditModal = () => {
+const EditModal = ({p,id}) => {
 
     const {register,handleSubmit,formState: { errors }} = useForm()
+    console.log(p)
     
         const a = async (v) => {
             console.log(v)
-            // await createData(v)
+            await createData(v)
         }
 
     return (
@@ -35,7 +35,7 @@ const EditModal = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                               {/* Destination Name */}
                               <div className="md:col-span-2">
-                                <TextField name="destinationName" isRequired>
+                                <TextField name="destinationName" defaultValue={p.destinationName} isRequired>
                                   <Label>Destination Name</Label>
                                   <Input placeholder="Bali Paradise" className="rounded-2xl" {...register("destinationName", { required: true })}/>
                                   <FieldError />
@@ -43,7 +43,7 @@ const EditModal = () => {
                               </div>
                 
                               {/* Country */}
-                              <TextField name="country" isRequired>
+                              <TextField name="country" defaultValue={p.country} isRequired>
                                 <Label>Country</Label>
                                 <Input placeholder="Indonesia" className="rounded-2xl" {...register("country", { required: true })}/>
                                 <FieldError />
@@ -56,6 +56,7 @@ const EditModal = () => {
                                   isRequired
                                   className="w-full"
                                   placeholder="Select category"
+                                defaultValue={p.category}
                                 >
                                   <Label>Category</Label>
                                   <Select.Trigger className="rounded-2xl">
@@ -94,7 +95,7 @@ const EditModal = () => {
                               </div>
                 
                               {/* Price */}
-                              <TextField name="price" type="number" isRequired>
+                              <TextField name="price" defaultValue={p.price} type="number" isRequired>
                                 <Label>Price (USD)</Label>
                                 <Input
                                   type="number"
@@ -106,7 +107,7 @@ const EditModal = () => {
                               </TextField>
                 
                               {/* Duration */}
-                              <TextField name="duration" isRequired>
+                              <TextField name="duration"defaultValue={p.duration} isRequired>
                                 <Label>Duration</Label>
                                 <Input
                                   placeholder="7 Days / 6 Nights"
@@ -118,7 +119,7 @@ const EditModal = () => {
                 
                               {/* Departure Date */}
                               <div className="md:col-span-2">
-                                <TextField name="departureDate" type="date" isRequired>
+                                <TextField name="departureDate" defaultValue={p.departureDate} type="date" isRequired>
                                   <Label>Departure Date</Label>
                                   <Input type="date" className="rounded-2xl" {...register("departureDate", { required: true })}/>
                                   <FieldError />
@@ -127,7 +128,7 @@ const EditModal = () => {
                 
                               {/* Image URL - Removed preview */}
                               <div className="md:col-span-2">
-                                <TextField name="imageUrl" isRequired>
+                                <TextField name="imageUrl" defaultValue={p.imageUrl} isRequired>
                                   <Label>Image URL</Label>
                                   <Input
                                     type="url"
@@ -141,7 +142,7 @@ const EditModal = () => {
                 
                               {/* Description */}
                               <div className="md:col-span-2">
-                                <TextField name="description" isRequired>
+                                <TextField name="description" defaultValue={p.description} isRequired>
                                   <Label>Description</Label>
                                   <TextArea
                                     placeholder="Describe the travel experience..."
@@ -158,9 +159,9 @@ const EditModal = () => {
                             <Button
                               type="submit"
                               variant="outline"
-                              className=" rounded-xl w-full bg-linear-to-br from-purple-500 to-pink-500 text-white"
+                              className=" rounded-xl w-full py-5 bg-linear-to-br from-purple-500 to-pink-500 text-white"
                             >
-                              Add destination
+                              Update destination
                             </Button>
                           </form>
               </Surface>
