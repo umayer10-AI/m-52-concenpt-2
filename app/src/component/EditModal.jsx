@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 const EditModal = ({p,id}) => {
 
     const {register,handleSubmit,formState: { errors }} = useForm()
-    // console.log(p)
     
         const a = async (v) => {
             await editUser(id,v)
@@ -15,7 +14,7 @@ const EditModal = ({p,id}) => {
 
     return (
         <div>
-            <Modal>
+        <Modal>
       <Button className="w-full py-5 rounded-2xl bg-yellow-400 text-black font-bold">
             Edit Tour
         </Button>
