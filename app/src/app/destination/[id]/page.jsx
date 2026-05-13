@@ -1,3 +1,4 @@
+import BookingBtn from "@/component/BookingBtn";
 import CancelData from "@/component/CancelData";
 import EditModal from "@/component/EditModal";
 import { getId } from "@/lib/data";
@@ -96,9 +97,7 @@ const DetailsPage = async ({params}) => {
 
               <div className="space-y-4">
 
-                <button className="w-full py-3 rounded-2xl bg-white text-purple-600 font-bold hover:scale-105 duration-300">
-                  Booking Now
-                </button>
+                <BookingBtn p={p} id={id}></BookingBtn>
 
                 <EditModal p={p} id={id}></EditModal>
 
