@@ -1,10 +1,11 @@
 "use client"
+import { bookingPost } from '@/lib/action';
 import React from 'react';
 
 const BookingBtn = ({p,id}) => {
 
-    const a = () => {
-
+    const a = async () => {
+        await bookingPost(p)
     }
 
     return (
