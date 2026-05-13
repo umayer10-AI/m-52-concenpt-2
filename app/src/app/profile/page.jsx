@@ -8,7 +8,6 @@ const page = () => {
 
     const { data: session } = authClient.useSession()
     const user = session?.user
-    // console.log(user)
 
     const stats = [
     { label: 'Total Bookings', value: '12', icon: <Plane className="text-cyan-500" />, bg: 'bg-cyan-50' },
