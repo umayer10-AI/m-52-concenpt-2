@@ -28,7 +28,7 @@ const Nav1 = () => {
     ]
 
     return (
-        <div className='flex items-center gap-7'>
+        <div className='flex items-center gap-7 font-semibold'>
             {
                 links.map(v => (
                     <Link key={v.name} href={v.path}>
