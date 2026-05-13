@@ -20,10 +20,13 @@ export const createData = async(formData) => {
 }
 
 export const deleteData = async (id) => {
-    // const res = await fetch(`http://localhost:5000/destination/${id}`,{
-    //     method: "DELETE"
-    // })
-    // const data = await res.json()
-    console.log(id)
-    // return data
+    const res = await fetch(`http://localhost:5000/destination/${id}`,{
+        method: "DELETE"
+    })
+    const data = await res.json()
+    if(data.deletedCount > 0){
+        toast.success('Destination Deleted')
+        redirect('/destination')
+    }
+    return data
 }

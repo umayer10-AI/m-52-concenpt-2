@@ -103,7 +103,7 @@ const DetailsPage = async ({params}) => {
                   Edit Tour
                 </button>
 
-                <CancelData p={id}></CancelData>
+                <CancelData p={id} a={p}></CancelData>
 
               </div>
 
