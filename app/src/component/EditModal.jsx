@@ -10,7 +10,6 @@ const EditModal = ({p,id}) => {
     // console.log(p)
     
         const a = async (v) => {
-            // console.log(v)
             await editUser(id,v)
         }
 
