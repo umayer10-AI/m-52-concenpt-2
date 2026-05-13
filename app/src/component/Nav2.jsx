@@ -16,7 +16,7 @@ const Nav2 = () => {
 
     return (
         <div className='font-semibold flex items-center gap-5'>
-            <h2 className='flex items-center gap-1'><FaRegUser />Profile</h2>
+            <Link href={'/profile'} className='flex items-center gap-1'><FaRegUser />Profile</Link>
 
             {
                 user?
