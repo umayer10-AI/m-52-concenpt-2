@@ -4,17 +4,18 @@ import { Calendar, Eye, Tag } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
-const Booking = () => {
+const Booking = ({p}) => {
+    console.log(p)
     return (
         <div>
-            <div>
+            <div className='shadow-md shadow-cyan-500 rounded-xl'>
             <div className="border border-cyan-600 rounded-xl overflow-hidden flex flex-col md:flex-row items-center p-6 gap-6 shadow-sm">
       
 
       <div className="w-full md:w-1/3 h-48 overflow-hidden rounded-sm">
         <Image height={100} width={100}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          src={p.image} 
+          src={p.imageUrl} 
           alt="Maldip" 
           className="w-full h-full object-cover"
         />
@@ -37,11 +38,11 @@ const Booking = () => {
           </div>
           <div className="flex items-center gap-2">
             <Tag size={18} />
-            <span className="text-sm font-medium">Category: Mountain • Duration: 7 Days</span>
+            <span className="text-sm font-medium">Category: {p.category} • Duration: 7 Days</span>
           </div>
           <div className="flex items-center gap-2">
             <Tag size={18} />
-            <span className="text-sm font-medium">User: {p.userName}</span>
+            <span className="text-sm font-medium">User: {p.description}</span>
           </div>
         </div>
 
