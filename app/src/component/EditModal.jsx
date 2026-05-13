@@ -6,7 +6,9 @@ const EditModal = () => {
     return (
         <div>
             <Modal>
-      <Button variant="secondary">Open Contact Form</Button>
+      <Button className="w-full py-5 rounded-2xl bg-yellow-400 text-black font-bold">
+            Edit Tour
+        </Button>
       <Modal.Backdrop>
         <Modal.Container placement="auto">
           <Modal.Dialog className="sm:max-w-md">
