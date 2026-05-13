@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const AllCards = ({p}) => {
@@ -45,9 +46,9 @@ const AllCards = ({p}) => {
             Departure: {p.departureDate}
           </p>
 
-          <button className="bg-linear-to-r from-purple-500 to-pink-500 text-white px-5 py-2 rounded-xl font-semibold hover:opacity-90">
+          <Link href={`/destination/${p._id}`} className="bg-linear-to-r from-purple-500 to-pink-500 text-white px-5 py-2 rounded-xl font-semibold hover:opacity-90">
             Explore
-          </button>
+          </Link>
         </div>
       </div>
     </div>
