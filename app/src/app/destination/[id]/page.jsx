@@ -17,6 +17,7 @@ const DetailsPage = async ({params}) => {
             src={p.imageUrl}
             alt={p.destinationName}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
 
@@ -82,7 +83,7 @@ const DetailsPage = async ({params}) => {
 
           {/* Right Side */}
           <div>
-            <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-3xl p-6 sticky top-10">
+            <div className="bg-linear-to-br from-purple-500 to-pink-500 text-white rounded-3xl p-6 sticky top-10">
 
               <h2 className="text-3xl font-bold mb-2">
                 ${p.price}
