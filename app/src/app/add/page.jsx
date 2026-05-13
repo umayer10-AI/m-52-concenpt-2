@@ -1,10 +1,19 @@
+"use client"
 import { Button, FieldError, Input, Label, ListBox,Select, TextArea, TextField } from '@heroui/react';
 import React from 'react';
+import { useForm } from 'react-hook-form';
 
 const AddPage = () => {
+
+    const {register,handleSubmit,formState: { errors }} = useForm()
+
+    const a = async (v) => {
+        console.log(v)
+    }
+
     return (
         <div className='mt-10'>
-            <form
+            <form onSubmit={handleSubmit(a)}
             className="p-6 space-y-8 w-1/2 mx-auto border border-pink-500 rounded-xl"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -12,7 +21,7 @@ const AddPage = () => {
               <div className="md:col-span-2">
                 <TextField name="destinationName" isRequired>
                   <Label>Destination Name</Label>
-                  <Input placeholder="Bali Paradise" className="rounded-2xl" />
+                  <Input placeholder="Bali Paradise" className="rounded-2xl" {...register("destinationName", { required: true })}/>
                   <FieldError />
                 </TextField>
               </div>
@@ -20,7 +29,7 @@ const AddPage = () => {
               {/* Country */}
               <TextField name="country" isRequired>
                 <Label>Country</Label>
-                <Input placeholder="Indonesia" className="rounded-2xl" />
+                <Input placeholder="Indonesia" className="rounded-2xl" {...register("country", { required: true })}/>
                 <FieldError />
               </TextField>
 
@@ -75,6 +84,7 @@ const AddPage = () => {
                   type="number"
                   placeholder="1299"
                   className="rounded-2xl"
+                  {...register("price", { required: true })}
                 />
                 <FieldError />
               </TextField>
@@ -85,6 +95,7 @@ const AddPage = () => {
                 <Input
                   placeholder="7 Days / 6 Nights"
                   className="rounded-2xl"
+                  {...register("duration", { required: true })}
                 />
                 <FieldError />
               </TextField>
@@ -93,7 +104,7 @@ const AddPage = () => {
               <div className="md:col-span-2">
                 <TextField name="departureDate" type="date" isRequired>
                   <Label>Departure Date</Label>
-                  <Input type="date" className="rounded-2xl" />
+                  <Input type="date" className="rounded-2xl" {...register("departureDate", { required: true })}/>
                   <FieldError />
                 </TextField>
               </div>
@@ -106,6 +117,7 @@ const AddPage = () => {
                     type="url"
                     placeholder="https://example.com/bali-paradise.jpg"
                     className="rounded-2xl"
+                    {...register("imageUrl", { required: true })}
                   />
                   <FieldError />
                 </TextField>
@@ -118,6 +130,7 @@ const AddPage = () => {
                   <TextArea
                     placeholder="Describe the travel experience..."
                     className="rounded-3xl"
+                    {...register("description", { required: true })}
                   />
                   <FieldError />
                 </TextField>
