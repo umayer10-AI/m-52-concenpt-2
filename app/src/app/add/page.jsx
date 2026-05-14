@@ -132,7 +132,6 @@ const AddPage = () => {
               </div>
             </div>
 
-            {/* Buttons */}
 
             <Button
               type="submit"
