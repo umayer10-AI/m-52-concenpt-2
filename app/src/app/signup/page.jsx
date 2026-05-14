@@ -111,6 +111,7 @@ const SignUpPage = () => {
         </InputGroup.Suffix>
       </InputGroup>
     </TextField>
+    
       <div className="flex gap-2 justify-center">
         <Button type="submit">
           <Check />
