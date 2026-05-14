@@ -88,7 +88,6 @@ const AddPage = () => {
                 <FieldError />
               </TextField>
 
-              {/* Duration */}
               <TextField name="duration" isRequired>
                 <Label>Duration</Label>
                 <Input
