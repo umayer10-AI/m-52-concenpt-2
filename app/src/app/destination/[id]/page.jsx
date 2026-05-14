@@ -42,7 +42,6 @@ const DetailsPage = async ({params}) => {
           </div>
         </div>
 
-        {/* Content */}
         <div className="p-8 grid md:grid-cols-3 gap-8">
 
           {/* Left */}
