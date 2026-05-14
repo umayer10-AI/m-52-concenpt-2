@@ -19,6 +19,7 @@ const AddPage = () => {
             className="p-6 space-y-8 w-1/2 mx-auto border border-pink-500 rounded-xl"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
               <div className="md:col-span-2">
                 <TextField name="destinationName" isRequired>
                   <Label>Destination Name</Label>
@@ -76,7 +77,6 @@ const AddPage = () => {
                 </Select>
               </div>
 
-              {/* Price */}
               <TextField name="price" type="number" isRequired>
                 <Label>Price (USD)</Label>
                 <Input
