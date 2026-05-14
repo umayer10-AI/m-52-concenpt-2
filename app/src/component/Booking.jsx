@@ -39,6 +39,7 @@ const Booking = ({p}) => {
             <Tag size={18} />
             <span className="text-sm font-medium">Category: {p.category} • Duration: 7 Days</span>
           </div>
+          
           <div className="flex items-center gap-2">
             <Tag size={18} />
             <span className="text-sm font-medium">User: {p.description}</span>
