@@ -65,6 +65,7 @@ const EditProfle = () => {
         </Modal.Container>
       </Modal.Backdrop>
     </Modal>
+    
         </div>
     );
 };
