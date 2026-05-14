@@ -98,7 +98,6 @@ const AddPage = () => {
                 <FieldError />
               </TextField>
 
-              {/* Departure Date */}
               <div className="md:col-span-2">
                 <TextField name="departureDate" type="date" isRequired>
                   <Label>Departure Date</Label>
