@@ -76,7 +76,7 @@ const Booking = ({p}) => {
               <Button onClick={() => deleteBooking(p._id)} slot="close" variant="danger">
                 Delete
               </Button>
-              
+
             </AlertDialog.Footer>
           </AlertDialog.Dialog>
         </AlertDialog.Container>
@@ -88,6 +88,7 @@ const Booking = ({p}) => {
           View
         </button>
       </div>
+      
             </div>
         </div>
         </div>
