@@ -67,6 +67,7 @@ const LoginPage = () => {
           placeholder='password'
           {...register("password", { required: true })}
         />
+        
         <InputGroup.Suffix className="pr-0">
           <Button
             isIconOnly
