@@ -13,7 +13,6 @@ const DetailsPage = async ({params}) => {
     <div className="py-10 px-4">
       <div className="max-w-6xl mx-auto bg-slate-800 shadow shadow-pink-500 rounded-3xl overflow-hidden">
 
-        {/* Banner Image */}
         <div className="relative w-full h-70">
           <Image
             src={p.imageUrl}
