@@ -10,7 +10,6 @@ const Booking = ({p}) => {
         <div>
             <div className='shadow-md shadow-cyan-500 rounded-xl'>
             <div className="border border-cyan-600 rounded-xl overflow-hidden flex flex-col md:flex-row items-center p-6 gap-6 shadow-sm">
-      
 
       <div className="w-full md:w-1/3 h-48 overflow-hidden rounded-sm">
         <Image height={100} width={100}
