@@ -119,7 +119,6 @@ const AddPage = () => {
                 </TextField>
               </div>
 
-              {/* Description */}
               <div className="md:col-span-2">
                 <TextField name="description" isRequired>
                   <Label>Description</Label>
