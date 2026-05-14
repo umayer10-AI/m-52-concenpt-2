@@ -35,7 +35,6 @@ const AddPage = () => {
                 <FieldError />
               </TextField>
 
-              {/* Category - Updated Select Component */}
               <div>
                 <Select
                   name="category"
