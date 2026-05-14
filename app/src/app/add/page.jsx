@@ -28,7 +28,6 @@ const AddPage = () => {
                 </TextField>
               </div>
 
-              {/* Country */}
               <TextField name="country" isRequired>
                 <Label>Country</Label>
                 <Input placeholder="Indonesia" className="rounded-2xl" {...register("country", { required: true })}/>
