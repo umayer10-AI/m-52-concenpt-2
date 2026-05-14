@@ -39,7 +39,7 @@ const Booking = ({p}) => {
             <Tag size={18} />
             <span className="text-sm font-medium">Category: {p.category} • Duration: 7 Days</span>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <Tag size={18} />
             <span className="text-sm font-medium">User: {p.description}</span>
@@ -63,6 +63,7 @@ const Booking = ({p}) => {
               <AlertDialog.Heading>Delete project permanently?</AlertDialog.Heading>
             </AlertDialog.Header>
             <AlertDialog.Body>
+              
               <p>
                 This will permanently delete <strong>My Awesome Project</strong> and all of its
                 data. This action cannot be undone.
