@@ -12,7 +12,6 @@ const Nav2 = () => {
     const { data: session } = authClient.useSession()
     const user = session?.user
 
-
     return (
         <div className='font-semibold flex items-center gap-5'>
             <Link href={'/profile'} className='flex items-center gap-1'><FaRegUser />Profile</Link>
