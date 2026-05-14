@@ -83,7 +83,6 @@ const DetailsPage = async ({params}) => {
             </div>
           </div>
 
-          {/* Right Side */}
           <div>
             <div className="bg-linear-to-br from-purple-500 to-pink-500 text-white rounded-3xl p-6 sticky top-10">
 
