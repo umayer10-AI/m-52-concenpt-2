@@ -67,7 +67,7 @@ const LoginPage = () => {
           placeholder='password'
           {...register("password", { required: true })}
         />
-        
+
         <InputGroup.Suffix className="pr-0">
           <Button
             isIconOnly
@@ -78,6 +78,7 @@ const LoginPage = () => {
           >
             {isVisible ? <Eye className="size-4" /> : <EyeSlash className="size-4" />}
           </Button>
+          
         </InputGroup.Suffix>
       </InputGroup>
     </TextField>
