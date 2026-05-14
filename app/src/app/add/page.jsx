@@ -106,7 +106,6 @@ const AddPage = () => {
                 </TextField>
               </div>
 
-              {/* Image URL - Removed preview */}
               <div className="md:col-span-2">
                 <TextField name="imageUrl" isRequired>
                   <Label>Image URL</Label>
