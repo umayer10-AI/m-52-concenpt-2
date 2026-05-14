@@ -63,7 +63,7 @@ const Booking = ({p}) => {
               <AlertDialog.Heading>Delete project permanently?</AlertDialog.Heading>
             </AlertDialog.Header>
             <AlertDialog.Body>
-              
+
               <p>
                 This will permanently delete <strong>My Awesome Project</strong> and all of its
                 data. This action cannot be undone.
@@ -76,6 +76,7 @@ const Booking = ({p}) => {
               <Button onClick={() => deleteBooking(p._id)} slot="close" variant="danger">
                 Delete
               </Button>
+              
             </AlertDialog.Footer>
           </AlertDialog.Dialog>
         </AlertDialog.Container>
