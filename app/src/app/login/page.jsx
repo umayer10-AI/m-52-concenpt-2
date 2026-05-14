@@ -53,12 +53,11 @@ const LoginPage = () => {
           return null;
         }}
       >
-        
+
         <Label>Email</Label>
         <Input placeholder="john@example.com" {...register("email", { required: true })}/>
         <FieldError />
       </TextField>
-
 
       <TextField className="w-full" name="password">
       <Label>Password</Label>
