@@ -87,7 +87,6 @@ const LoginPage = () => {
           <Check />
           Login
         </Button>
-        
       </div>
 
         <div onClick={googleHandler} className='flex items-center gap-1 justify-center text-sm py-2 text-black bg-amber-50 font-semibold rounded-xl'>
