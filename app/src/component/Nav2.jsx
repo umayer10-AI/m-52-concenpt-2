@@ -43,7 +43,6 @@ const Nav2 = () => {
                 </Link>
             </div>
             }
-
             
         </div>
     );
